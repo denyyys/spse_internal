@@ -1,0 +1,20 @@
+Dependencies for Project 'first', Target 'Target 1': (DO NOT MODIFY !)
+F (.\RTE\Device\STM32F407VGTx\code1.c)(0x61E69F6A)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork --split_sections-I C:\3b\mynari18012022\RTE-I f:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I f:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F407xx-o .\objects\code1.o --omf_browse .\objects\code1.crf --depend .\objects\code1.d)
+I (f:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x56447AD8)
+I (f:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h)(0x56447AD8)
+I (f:\Keil_v5\ARM\CMSIS\Include\core_cm4.h)(0x559D31EA)
+I (f:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569E3E9A)
+I (f:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D31EA)
+I (f:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D31EA)
+I (f:\Keil_v5\ARM\CMSIS\Include\core_cm4_simd.h)(0x559D31EA)
+I (f:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x56447AD6)
+F (RTE\Device\STM32F407VGTx\startup_stm32f407xx.s)(0x56447AD4)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\3b\mynari18012022\RTE-I f:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I f:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 518" --pd "_RTE_ SETA 1" --pd "STM32F407xx SETA 1"--list .\listings\startup_stm32f407xx.lst --xref -o .\objects\startup_stm32f407xx.o --depend .\objects\startup_stm32f407xx.d)
+F (RTE\Device\STM32F407VGTx\system_stm32f4xx.c)(0x56447AD6)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork --split_sections-I C:\3b\mynari18012022\RTE-I f:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I f:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F407xx-o .\objects\system_stm32f4xx.o --omf_browse .\objects\system_stm32f4xx.crf --depend .\objects\system_stm32f4xx.d)
+I (f:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x56447AD8)
+I (f:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h)(0x56447AD8)
+I (f:\Keil_v5\ARM\CMSIS\Include\core_cm4.h)(0x559D31EA)
+I (f:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x569E3E9A)
+I (f:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559D31EA)
+I (f:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559D31EA)
+I (f:\Keil_v5\ARM\CMSIS\Include\core_cm4_simd.h)(0x559D31EA)
+I (f:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x56447AD6)

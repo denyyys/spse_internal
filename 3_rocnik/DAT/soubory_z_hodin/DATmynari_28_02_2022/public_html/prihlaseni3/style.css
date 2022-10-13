@@ -1,0 +1,42 @@
+/* CSS Document */
+
+.metoda {
+  display: inline-block;
+  margin-left: 25px;
+  border: 1px solid black;
+  border-collapse: collapse:
+  border-spacing: 0;
+  text-align: center;
+  padding: 5px;  
+}
+
+.vypis {
+  width: 550px;
+  margin-left: 25px;
+  border: 1px solid black;
+  border-collapse: collapse:
+  border-spacing: 0;
+  text-align: center; 
+  padding: 5px; 
+}
+
+.nadpis {
+  font-family: Verdana;
+  font-weight: bold;
+  color: blue;
+  text-align: center;  
+}
+
+.vlevo {
+  font-family: Verdana;
+  color: black;
+  text-align: left;  
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0,51,255); 
+}
+
+
+

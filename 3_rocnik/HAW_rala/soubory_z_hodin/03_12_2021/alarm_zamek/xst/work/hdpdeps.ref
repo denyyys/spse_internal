@@ -1,0 +1,8 @@
+V3 3
+FL /home/q07/Desktop/mynari03_12_2021/alarm_zamek/alarm_zamek.vhd 2021/12/03.10:55:42 P.15xf
+EN work/alarm_zamek 1638525832 \
+      FL /home/q07/Desktop/mynari03_12_2021/alarm_zamek/alarm_zamek.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/alarm_zamek/Behavioral 1638525833 \
+      FL /home/q07/Desktop/mynari03_12_2021/alarm_zamek/alarm_zamek.vhd \
+      EN work/alarm_zamek 1638525832

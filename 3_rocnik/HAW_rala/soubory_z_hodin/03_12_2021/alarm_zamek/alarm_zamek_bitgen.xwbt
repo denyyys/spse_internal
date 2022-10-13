@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/q07/Desktop/mynari03_12_2021/alarm_zamek/alarm_zamek.ncd
+OUTFILE=/home/q07/Desktop/mynari03_12_2021/alarm_zamek/alarm_zamek.bit
+FAMILY=Spartan3E
+PART=xc3s250e-5cp132
+WORKINGDIR=/home/q07/Desktop/mynari03_12_2021/alarm_zamek
+LICENSE=WebPack
+USER_INFO=210745664_0_0_552

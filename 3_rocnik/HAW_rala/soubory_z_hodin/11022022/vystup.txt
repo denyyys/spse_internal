@@ -1,0 +1,7 @@
+	for(i=0;i<10;i++)
+			{
+				VYSTUP=cisla[i];
+				GPIOE->ODR =~(VYSTUP<<12);
+			}
+		}
+	}

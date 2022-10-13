@@ -1,0 +1,6 @@
+SELECT nazev_p as 'Název povolání',
+COUNT(id_h) as 'Poèet hrdinù' from pohled_hrdinove 
+GROUP BY nazev_p;
+
+------------------------------------------------------
+

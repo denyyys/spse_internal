@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "/home/q07/Desktop/mynari03_12_2021/alarm_zamek/alarm_zamek.xst" -ofn "/home/q07/Desktop/mynari03_12_2021/alarm_zamek/alarm_zamek.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc piny_spartan.ucf -p xc3s250e-cp132-5 alarm_zamek.ngc alarm_zamek.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc piny_spartan.ucf -p xc3s250e-cp132-5 alarm_zamek.ngc alarm_zamek.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc piny_spartan.ucf -p xc3s250e-cp132-5 alarm_zamek.ngc alarm_zamek.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o alarm_zamek_map.ncd alarm_zamek.ngd alarm_zamek.pcf 
+par -w -intstyle ise -ol high -t 1 alarm_zamek_map.ncd alarm_zamek.ncd alarm_zamek.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml alarm_zamek.twx alarm_zamek.ncd -o alarm_zamek.twr alarm_zamek.pcf -ucf piny_spartan.ucf 
+bitgen -intstyle ise -f alarm_zamek.ut alarm_zamek.ncd 

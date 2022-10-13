@@ -1,0 +1,8 @@
+* source ZESILOVAC_MYNARI
+E_U1         VOUT 0 VALUE {LIMIT(V(0,N00225)*1E6,-15V,+15V)}
+V_V1         VIN 0 DC 0V AC 1V
++SIN 0V 5V 10k 0 0 0
+C_C1         VIN N00188  1694n  TC=0,0 
+C_C2         N00225 VOUT  1.8n  TC=0,0 
+R_R1         N00188 N00225  4.7k TC=0,0 
+R_R2         N00225 VOUT  22.1k TC=0,0 
