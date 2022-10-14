@@ -17,6 +17,9 @@ github repositar obsahujici ruznorode zdrojove kody a jine random materialy prev
 - rala
 - bad
 
+## Feedback
+
+pokud nekomu tady neco chybi hodte to jako Issue pro tenhle repository
 
 ## FAQ
 
