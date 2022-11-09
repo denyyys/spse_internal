@@ -1,0 +1,4 @@
+﻿  znova.cpp
+C:\Users\Uživatel\Desktop\znova\znova\Form1.h(243,24): warning C4244: =: wchar_t se převádí na char; může dojít ke ztrátě dat.
+  AssemblyInfo.obj : Našel se modul MSIL. Přírůstkové propojování je pro MSIL vypnuté. Provádí se úplné propojení.
+  znova.vcxproj -> C:\Users\Uživatel\Desktop\znova\Debug\znova.exe

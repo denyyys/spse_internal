@@ -1,0 +1,3 @@
+C:\Users\Uživatel\Desktop\znova\znova\Debug\znova.vcxproj.AssemblyReference.cache
+C:\Users\Uživatel\Desktop\znova\znova\Debug\znova.Form1.resources
+C:\Users\Uživatel\Desktop\znova\znova\Debug\znova.vcxproj.GenerateResource.cache
