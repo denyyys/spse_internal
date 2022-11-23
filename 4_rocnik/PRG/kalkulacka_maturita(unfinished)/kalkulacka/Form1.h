@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include <cmath> //funkce pro matematicke operace (viz. tretiodmocnina_Click)
 
 namespace kalkulacka {
 
@@ -68,6 +69,27 @@ namespace kalkulacka {
 	private: System::Windows::Forms::Button^  tretimocnina;
 	private: System::Windows::Forms::Button^  nantou;
 	private: System::Windows::Forms::Button^  tretiodmocnina;
+	private: System::Windows::Forms::Button^  mazani;
+	private: System::Windows::Forms::Button^  tangens;
+	private: System::Windows::Forms::Button^  logaritmus;
+	private: System::Windows::Forms::Button^  cotangens;
+
+
+
+	private: System::Windows::Forms::Button^  ln;
+	private: System::Windows::Forms::Button^  cosinus;
+	private: System::Windows::Forms::Button^  sinus;
+	private: System::Windows::Forms::Button^  m_plus;
+	private: System::Windows::Forms::Button^  m_recall;
+	private: System::Windows::Forms::Button^  m_store;
+
+
+
+	private: System::Windows::Forms::Button^  m_minus;
+	private: System::Windows::Forms::Button^  m_clr;
+
+
+
 
 
 
@@ -106,6 +128,18 @@ namespace kalkulacka {
 			this->tretimocnina = (gcnew System::Windows::Forms::Button());
 			this->nantou = (gcnew System::Windows::Forms::Button());
 			this->tretiodmocnina = (gcnew System::Windows::Forms::Button());
+			this->mazani = (gcnew System::Windows::Forms::Button());
+			this->tangens = (gcnew System::Windows::Forms::Button());
+			this->logaritmus = (gcnew System::Windows::Forms::Button());
+			this->cotangens = (gcnew System::Windows::Forms::Button());
+			this->ln = (gcnew System::Windows::Forms::Button());
+			this->cosinus = (gcnew System::Windows::Forms::Button());
+			this->sinus = (gcnew System::Windows::Forms::Button());
+			this->m_plus = (gcnew System::Windows::Forms::Button());
+			this->m_recall = (gcnew System::Windows::Forms::Button());
+			this->m_store = (gcnew System::Windows::Forms::Button());
+			this->m_minus = (gcnew System::Windows::Forms::Button());
+			this->m_clr = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// displej
@@ -115,7 +149,7 @@ namespace kalkulacka {
 			this->displej->Enabled = false;
 			this->displej->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->displej->Location = System::Drawing::Point(59, 37);
+			this->displej->Location = System::Drawing::Point(58, 26);
 			this->displej->Name = L"displej";
 			this->displej->Size = System::Drawing::Size(400, 38);
 			this->displej->TabIndex = 0;
@@ -130,7 +164,7 @@ namespace kalkulacka {
 			this->cislo7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->cislo7->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->cislo7->Location = System::Drawing::Point(59, 98);
+			this->cislo7->Location = System::Drawing::Point(58, 159);
 			this->cislo7->Name = L"cislo7";
 			this->cislo7->Size = System::Drawing::Size(62, 57);
 			this->cislo7->TabIndex = 1;
@@ -146,7 +180,7 @@ namespace kalkulacka {
 			this->cislo8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->cislo8->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->cislo8->Location = System::Drawing::Point(127, 98);
+			this->cislo8->Location = System::Drawing::Point(126, 159);
 			this->cislo8->Name = L"cislo8";
 			this->cislo8->Size = System::Drawing::Size(62, 57);
 			this->cislo8->TabIndex = 2;
@@ -162,7 +196,7 @@ namespace kalkulacka {
 			this->cislo9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->cislo9->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->cislo9->Location = System::Drawing::Point(195, 98);
+			this->cislo9->Location = System::Drawing::Point(194, 159);
 			this->cislo9->Name = L"cislo9";
 			this->cislo9->Size = System::Drawing::Size(62, 57);
 			this->cislo9->TabIndex = 3;
@@ -178,9 +212,9 @@ namespace kalkulacka {
 			this->delete1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->delete1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->delete1->Location = System::Drawing::Point(440, 98);
+			this->delete1->Location = System::Drawing::Point(439, 159);
 			this->delete1->Name = L"delete1";
-			this->delete1->Size = System::Drawing::Size(64, 213);
+			this->delete1->Size = System::Drawing::Size(64, 135);
 			this->delete1->TabIndex = 4;
 			this->delete1->Text = L"CE";
 			this->delete1->UseVisualStyleBackColor = false;
@@ -192,7 +226,7 @@ namespace kalkulacka {
 			this->plus->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->plus->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->plus->Location = System::Drawing::Point(305, 176);
+			this->plus->Location = System::Drawing::Point(304, 237);
 			this->plus->Name = L"plus";
 			this->plus->Size = System::Drawing::Size(62, 57);
 			this->plus->TabIndex = 8;
@@ -208,7 +242,7 @@ namespace kalkulacka {
 			this->cislo6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->cislo6->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->cislo6->Location = System::Drawing::Point(195, 176);
+			this->cislo6->Location = System::Drawing::Point(194, 237);
 			this->cislo6->Name = L"cislo6";
 			this->cislo6->Size = System::Drawing::Size(62, 57);
 			this->cislo6->TabIndex = 7;
@@ -224,7 +258,7 @@ namespace kalkulacka {
 			this->cislo5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->cislo5->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->cislo5->Location = System::Drawing::Point(127, 176);
+			this->cislo5->Location = System::Drawing::Point(126, 237);
 			this->cislo5->Name = L"cislo5";
 			this->cislo5->Size = System::Drawing::Size(62, 57);
 			this->cislo5->TabIndex = 6;
@@ -240,7 +274,7 @@ namespace kalkulacka {
 			this->cislo4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->cislo4->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->cislo4->Location = System::Drawing::Point(59, 176);
+			this->cislo4->Location = System::Drawing::Point(58, 237);
 			this->cislo4->Name = L"cislo4";
 			this->cislo4->Size = System::Drawing::Size(62, 57);
 			this->cislo4->TabIndex = 5;
@@ -254,7 +288,7 @@ namespace kalkulacka {
 			this->minus->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->minus->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->minus->Location = System::Drawing::Point(305, 254);
+			this->minus->Location = System::Drawing::Point(304, 315);
 			this->minus->Name = L"minus";
 			this->minus->Size = System::Drawing::Size(62, 57);
 			this->minus->TabIndex = 12;
@@ -270,7 +304,7 @@ namespace kalkulacka {
 			this->cislo3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->cislo3->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->cislo3->Location = System::Drawing::Point(195, 254);
+			this->cislo3->Location = System::Drawing::Point(194, 315);
 			this->cislo3->Name = L"cislo3";
 			this->cislo3->Size = System::Drawing::Size(62, 57);
 			this->cislo3->TabIndex = 11;
@@ -286,7 +320,7 @@ namespace kalkulacka {
 			this->cislo2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->cislo2->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->cislo2->Location = System::Drawing::Point(127, 254);
+			this->cislo2->Location = System::Drawing::Point(126, 315);
 			this->cislo2->Name = L"cislo2";
 			this->cislo2->Size = System::Drawing::Size(62, 57);
 			this->cislo2->TabIndex = 10;
@@ -302,7 +336,7 @@ namespace kalkulacka {
 			this->cislo1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->cislo1->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->cislo1->Location = System::Drawing::Point(59, 254);
+			this->cislo1->Location = System::Drawing::Point(58, 315);
 			this->cislo1->Name = L"cislo1";
 			this->cislo1->Size = System::Drawing::Size(62, 57);
 			this->cislo1->TabIndex = 9;
@@ -317,7 +351,7 @@ namespace kalkulacka {
 			this->rovnase->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->rovnase->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->rovnase->Location = System::Drawing::Point(80, 402);
+			this->rovnase->Location = System::Drawing::Point(79, 463);
 			this->rovnase->Name = L"rovnase";
 			this->rovnase->Size = System::Drawing::Size(153, 57);
 			this->rovnase->TabIndex = 16;
@@ -333,7 +367,7 @@ namespace kalkulacka {
 			this->carka->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->carka->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->carka->Location = System::Drawing::Point(195, 332);
+			this->carka->Location = System::Drawing::Point(194, 393);
 			this->carka->Name = L"carka";
 			this->carka->Size = System::Drawing::Size(62, 57);
 			this->carka->TabIndex = 15;
@@ -349,7 +383,7 @@ namespace kalkulacka {
 			this->cislo0->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->cislo0->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->cislo0->Location = System::Drawing::Point(127, 332);
+			this->cislo0->Location = System::Drawing::Point(126, 393);
 			this->cislo0->Name = L"cislo0";
 			this->cislo0->Size = System::Drawing::Size(62, 57);
 			this->cislo0->TabIndex = 14;
@@ -366,7 +400,7 @@ namespace kalkulacka {
 			this->plusminus->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->plusminus->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->plusminus->Location = System::Drawing::Point(59, 332);
+			this->plusminus->Location = System::Drawing::Point(58, 393);
 			this->plusminus->Name = L"plusminus";
 			this->plusminus->Size = System::Drawing::Size(62, 57);
 			this->plusminus->TabIndex = 13;
@@ -380,11 +414,11 @@ namespace kalkulacka {
 			this->krat->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->krat->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->krat->Location = System::Drawing::Point(373, 176);
+			this->krat->Location = System::Drawing::Point(372, 237);
 			this->krat->Name = L"krat";
 			this->krat->Size = System::Drawing::Size(62, 57);
 			this->krat->TabIndex = 17;
-			this->krat->Text = L"*";
+			this->krat->Text = L"x";
 			this->krat->UseVisualStyleBackColor = false;
 			this->krat->Click += gcnew System::EventHandler(this, &Form1::krat_Click);
 			// 
@@ -392,13 +426,13 @@ namespace kalkulacka {
 			// 
 			this->deleno->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->deleno->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->deleno->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->deleno->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->deleno->Location = System::Drawing::Point(373, 254);
+			this->deleno->Location = System::Drawing::Point(372, 315);
 			this->deleno->Name = L"deleno";
 			this->deleno->Size = System::Drawing::Size(62, 57);
 			this->deleno->TabIndex = 18;
-			this->deleno->Text = L"/";
+			this->deleno->Text = L"÷";
 			this->deleno->UseVisualStyleBackColor = false;
 			this->deleno->Click += gcnew System::EventHandler(this, &Form1::deleno_Click);
 			// 
@@ -408,7 +442,7 @@ namespace kalkulacka {
 			this->pi->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->pi->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->pi->Location = System::Drawing::Point(374, 98);
+			this->pi->Location = System::Drawing::Point(373, 159);
 			this->pi->Name = L"pi";
 			this->pi->Size = System::Drawing::Size(62, 57);
 			this->pi->TabIndex = 19;
@@ -422,7 +456,7 @@ namespace kalkulacka {
 			this->druhamocnina->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->druhamocnina->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->druhamocnina->Location = System::Drawing::Point(374, 332);
+			this->druhamocnina->Location = System::Drawing::Point(373, 393);
 			this->druhamocnina->Name = L"druhamocnina";
 			this->druhamocnina->Size = System::Drawing::Size(62, 57);
 			this->druhamocnina->TabIndex = 20;
@@ -436,7 +470,7 @@ namespace kalkulacka {
 			this->factorial->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->factorial->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->factorial->Location = System::Drawing::Point(305, 98);
+			this->factorial->Location = System::Drawing::Point(304, 159);
 			this->factorial->Name = L"factorial";
 			this->factorial->Size = System::Drawing::Size(63, 57);
 			this->factorial->TabIndex = 21;
@@ -450,7 +484,7 @@ namespace kalkulacka {
 			this->odmocnina->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->odmocnina->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->odmocnina->Location = System::Drawing::Point(372, 395);
+			this->odmocnina->Location = System::Drawing::Point(371, 456);
 			this->odmocnina->Name = L"odmocnina";
 			this->odmocnina->Size = System::Drawing::Size(62, 57);
 			this->odmocnina->TabIndex = 22;
@@ -464,7 +498,7 @@ namespace kalkulacka {
 			this->tretimocnina->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->tretimocnina->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->tretimocnina->Location = System::Drawing::Point(440, 332);
+			this->tretimocnina->Location = System::Drawing::Point(439, 393);
 			this->tretimocnina->Name = L"tretimocnina";
 			this->tretimocnina->Size = System::Drawing::Size(62, 57);
 			this->tretimocnina->TabIndex = 23;
@@ -478,7 +512,7 @@ namespace kalkulacka {
 			this->nantou->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->nantou->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->nantou->Location = System::Drawing::Point(305, 332);
+			this->nantou->Location = System::Drawing::Point(304, 393);
 			this->nantou->Name = L"nantou";
 			this->nantou->Size = System::Drawing::Size(62, 57);
 			this->nantou->TabIndex = 24;
@@ -492,7 +526,7 @@ namespace kalkulacka {
 			this->tretiodmocnina->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->tretiodmocnina->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->tretiodmocnina->Location = System::Drawing::Point(440, 395);
+			this->tretiodmocnina->Location = System::Drawing::Point(439, 456);
 			this->tretiodmocnina->Name = L"tretiodmocnina";
 			this->tretiodmocnina->Size = System::Drawing::Size(62, 57);
 			this->tretiodmocnina->TabIndex = 25;
@@ -500,13 +534,204 @@ namespace kalkulacka {
 			this->tretiodmocnina->UseVisualStyleBackColor = false;
 			this->tretiodmocnina->Click += gcnew System::EventHandler(this, &Form1::tretiodmocnina_Click);
 			// 
+			// mazani
+			// 
+			this->mazani->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->mazani->FlatAppearance->BorderSize = 0;
+			this->mazani->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->mazani->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->mazani->Location = System::Drawing::Point(440, 308);
+			this->mazani->Name = L"mazani";
+			this->mazani->Size = System::Drawing::Size(64, 64);
+			this->mazani->TabIndex = 26;
+			this->mazani->Text = L"C";
+			this->mazani->UseVisualStyleBackColor = false;
+			this->mazani->Click += gcnew System::EventHandler(this, &Form1::mazani_Click);
+			// 
+			// tangens
+			// 
+			this->tangens->BackColor = System::Drawing::SystemColors::ControlLight;
+			this->tangens->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->tangens->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->tangens->Location = System::Drawing::Point(439, 659);
+			this->tangens->Name = L"tangens";
+			this->tangens->Size = System::Drawing::Size(62, 57);
+			this->tangens->TabIndex = 29;
+			this->tangens->Text = L"tg";
+			this->tangens->UseVisualStyleBackColor = false;
+			this->tangens->Click += gcnew System::EventHandler(this, &Form1::tangens_Click);
+			// 
+			// logaritmus
+			// 
+			this->logaritmus->BackColor = System::Drawing::SystemColors::ControlLight;
+			this->logaritmus->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->logaritmus->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->logaritmus->Location = System::Drawing::Point(439, 533);
+			this->logaritmus->Name = L"logaritmus";
+			this->logaritmus->Size = System::Drawing::Size(62, 57);
+			this->logaritmus->TabIndex = 28;
+			this->logaritmus->Text = L"log";
+			this->logaritmus->UseVisualStyleBackColor = false;
+			this->logaritmus->Click += gcnew System::EventHandler(this, &Form1::logaritmus_Click);
+			// 
+			// cotangens
+			// 
+			this->cotangens->BackColor = System::Drawing::SystemColors::ControlLight;
+			this->cotangens->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->cotangens->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->cotangens->Location = System::Drawing::Point(439, 596);
+			this->cotangens->Name = L"cotangens";
+			this->cotangens->Size = System::Drawing::Size(62, 57);
+			this->cotangens->TabIndex = 27;
+			this->cotangens->Text = L"cotg";
+			this->cotangens->UseVisualStyleBackColor = false;
+			this->cotangens->Click += gcnew System::EventHandler(this, &Form1::cotangens_Click);
+			// 
+			// ln
+			// 
+			this->ln->BackColor = System::Drawing::SystemColors::ControlLight;
+			this->ln->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->ln->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->ln->Location = System::Drawing::Point(371, 659);
+			this->ln->Name = L"ln";
+			this->ln->Size = System::Drawing::Size(62, 57);
+			this->ln->TabIndex = 32;
+			this->ln->Text = L"ln";
+			this->ln->UseVisualStyleBackColor = false;
+			// 
+			// cosinus
+			// 
+			this->cosinus->BackColor = System::Drawing::SystemColors::ControlLight;
+			this->cosinus->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->cosinus->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->cosinus->Location = System::Drawing::Point(371, 533);
+			this->cosinus->Name = L"cosinus";
+			this->cosinus->Size = System::Drawing::Size(62, 57);
+			this->cosinus->TabIndex = 31;
+			this->cosinus->Text = L"cos";
+			this->cosinus->UseVisualStyleBackColor = false;
+			this->cosinus->Click += gcnew System::EventHandler(this, &Form1::cosinus_Click);
+			// 
+			// sinus
+			// 
+			this->sinus->BackColor = System::Drawing::SystemColors::ControlLight;
+			this->sinus->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->sinus->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->sinus->Location = System::Drawing::Point(371, 596);
+			this->sinus->Name = L"sinus";
+			this->sinus->Size = System::Drawing::Size(62, 57);
+			this->sinus->TabIndex = 30;
+			this->sinus->Text = L"sin";
+			this->sinus->UseVisualStyleBackColor = false;
+			this->sinus->Click += gcnew System::EventHandler(this, &Form1::sinus_Click);
+			// 
+			// m_plus
+			// 
+			this->m_plus->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->m_plus->FlatAppearance->BorderSize = 0;
+			this->m_plus->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->m_plus->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->m_plus->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+			this->m_plus->Location = System::Drawing::Point(262, 70);
+			this->m_plus->Name = L"m_plus";
+			this->m_plus->Size = System::Drawing::Size(62, 57);
+			this->m_plus->TabIndex = 35;
+			this->m_plus->Text = L"M+";
+			this->m_plus->UseVisualStyleBackColor = false;
+			this->m_plus->Click += gcnew System::EventHandler(this, &Form1::m_plus_Click);
+			// 
+			// m_recall
+			// 
+			this->m_recall->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->m_recall->FlatAppearance->BorderSize = 0;
+			this->m_recall->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->m_recall->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->m_recall->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+			this->m_recall->Location = System::Drawing::Point(126, 70);
+			this->m_recall->Name = L"m_recall";
+			this->m_recall->Size = System::Drawing::Size(62, 57);
+			this->m_recall->TabIndex = 34;
+			this->m_recall->Text = L"MR";
+			this->m_recall->UseVisualStyleBackColor = false;
+			this->m_recall->Click += gcnew System::EventHandler(this, &Form1::m_recall_Click);
+			// 
+			// m_store
+			// 
+			this->m_store->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->m_store->FlatAppearance->BorderSize = 0;
+			this->m_store->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->m_store->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->m_store->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+			this->m_store->Location = System::Drawing::Point(194, 70);
+			this->m_store->Name = L"m_store";
+			this->m_store->Size = System::Drawing::Size(62, 57);
+			this->m_store->TabIndex = 33;
+			this->m_store->Text = L"MS";
+			this->m_store->UseVisualStyleBackColor = false;
+			this->m_store->Click += gcnew System::EventHandler(this, &Form1::m_store_Click);
+			// 
+			// m_minus
+			// 
+			this->m_minus->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->m_minus->FlatAppearance->BorderSize = 0;
+			this->m_minus->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->m_minus->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->m_minus->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+			this->m_minus->Location = System::Drawing::Point(330, 70);
+			this->m_minus->Name = L"m_minus";
+			this->m_minus->Size = System::Drawing::Size(62, 57);
+			this->m_minus->TabIndex = 36;
+			this->m_minus->Text = L"M-";
+			this->m_minus->UseVisualStyleBackColor = false;
+			this->m_minus->Click += gcnew System::EventHandler(this, &Form1::m_minus_Click);
+			// 
+			// m_clr
+			// 
+			this->m_clr->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->m_clr->FlatAppearance->BorderSize = 0;
+			this->m_clr->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->m_clr->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->m_clr->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+			this->m_clr->Location = System::Drawing::Point(58, 70);
+			this->m_clr->Name = L"m_clr";
+			this->m_clr->Size = System::Drawing::Size(62, 57);
+			this->m_clr->TabIndex = 37;
+			this->m_clr->Text = L"MC";
+			this->m_clr->UseVisualStyleBackColor = false;
+			this->m_clr->Click += gcnew System::EventHandler(this, &Form1::m_clr_Click);
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->ClientSize = System::Drawing::Size(512, 471);
+			this->ClientSize = System::Drawing::Size(512, 731);
+			this->Controls->Add(this->m_clr);
+			this->Controls->Add(this->m_minus);
+			this->Controls->Add(this->m_plus);
+			this->Controls->Add(this->m_recall);
+			this->Controls->Add(this->m_store);
+			this->Controls->Add(this->ln);
+			this->Controls->Add(this->cosinus);
+			this->Controls->Add(this->sinus);
+			this->Controls->Add(this->tangens);
+			this->Controls->Add(this->logaritmus);
+			this->Controls->Add(this->cotangens);
+			this->Controls->Add(this->mazani);
 			this->Controls->Add(this->tretiodmocnina);
 			this->Controls->Add(this->nantou);
 			this->Controls->Add(this->tretimocnina);
@@ -536,8 +761,8 @@ namespace kalkulacka {
 			this->HelpButton = true;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
-			this->MaximumSize = System::Drawing::Size(528, 509);
-			this->MinimumSize = System::Drawing::Size(525, 509);
+			this->MaximumSize = System::Drawing::Size(528, 800);
+			this->MinimumSize = System::Drawing::Size(525, 700);
 			this->Name = L"Form1";
 			this->Text = L"Myn_kalk";
 			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
@@ -548,6 +773,7 @@ namespace kalkulacka {
 #pragma endregion
 		double prvni, druhe, vysledek;
 		int op;
+		float memory=0;
 	private: System::Void Form1_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
 private: System::Void cislo7_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -591,24 +817,48 @@ private: System::Void cislo0_Click(System::Object^  sender, System::EventArgs^  
 	else displej->Text += "0";
 }
 private: System::Void plus_Click(System::Object^  sender, System::EventArgs^  e) {
-	prvni = Convert::ToDouble(displej->Text);
-	displej->Text = "0";
-	op = 1; // scitani
+	if (displej->Text->Equals("-")) {
+		MessageBox::Show("chybi cislo!");
+		displej->Text = "0";
+	}
+	else {
+		prvni = Convert::ToDouble(displej->Text);
+		displej->Text = "0";
+		op = 1; // scitani
+	}
 }
 private: System::Void minus_Click(System::Object^  sender, System::EventArgs^  e) {
-	prvni = Convert::ToDouble(displej->Text);
-	displej->Text = "0";
-	op = 2; // odcitani
+	if (displej->Text->Equals("-")) {
+		MessageBox::Show("chybi cislo!");
+		displej->Text = "0";
+	}
+	else {
+		prvni = Convert::ToDouble(displej->Text);
+		displej->Text = "0";
+		op = 2; // odcitani
+	}
 }
 private: System::Void krat_Click(System::Object^  sender, System::EventArgs^  e) {
-	prvni = Convert::ToDouble(displej->Text);
-	displej->Text = "0";
-	op = 3; // nasobeni
+	if (displej->Text->Equals("-")) {
+		MessageBox::Show("chybi cislo!");
+		displej->Text = "0";
+	}
+	else {
+		prvni = Convert::ToDouble(displej->Text);
+		displej->Text = "0";
+		op = 3; // nasobeni
+	}
 }
 private: System::Void deleno_Click(System::Object^  sender, System::EventArgs^  e) {
-	prvni = Convert::ToDouble(displej->Text);
-	displej->Text = "0";
-	op = 4; // deleni
+	if (displej->Text->Equals("-")) {
+		MessageBox::Show("chybi cislo!");
+		displej->Text = "0";
+	}
+	else {
+		prvni = Convert::ToDouble(displej->Text);
+		displej->Text = "0";
+		op = 4; // deleni
+	}
 }
 private: System::Void rovnase_Click(System::Object^  sender, System::EventArgs^  e) {
 	druhe = Convert::ToDouble(displej->Text);
@@ -616,9 +866,10 @@ private: System::Void rovnase_Click(System::Object^  sender, System::EventArgs^ 
 	switch (op)
 	{
 	case 1: 
-		vysledek = prvni + druhe;
-		displej->Text = Convert::ToString(vysledek);
-		break;
+			vysledek = prvni + druhe;
+			displej->Text = Convert::ToString(vysledek);
+			break;
+		
 
 	case 2:
 		vysledek = prvni - druhe;
@@ -659,54 +910,175 @@ private: System::Void carka_Click(System::Object^  sender, System::EventArgs^  e
 	else MessageBox::Show("nemuzou byt dve desetinne carky!");
 }
 private: System::Void pi_Click(System::Object^  sender, System::EventArgs^  e) {
-	vysledek = Math::PI;
-	displej->Text = Convert::ToString(vysledek);
+	if (displej->Text->Equals("-")) {
+		MessageBox::Show("chybi cislo!");
+		displej->Text = "0";
+	}
+	else {
+		vysledek = Math::PI;
+		displej->Text = Convert::ToString(vysledek);
+	}
 }
 
 private: System::Void druhamocnina_Click(System::Object^  sender, System::EventArgs^  e) {
-	prvni = Convert::ToDouble(displej->Text);
-	vysledek = prvni * prvni;
-	displej->Text = Convert::ToString(vysledek);
-}
-private: System::Void tretimocnina_Click(System::Object^  sender, System::EventArgs^  e) {
-	prvni = Convert::ToDouble(displej->Text);
-	vysledek = prvni * prvni * prvni;
-	displej->Text = Convert::ToString(vysledek);
-}
-private: System::Void nantou_Click(System::Object^  sender, System::EventArgs^  e) {
-	prvni = Convert::ToDouble(displej->Text);
-	displej->Text = "0";
-	op = 5; // na ntou
-}
-private: System::Void factorial_Click(System::Object^  sender, System::EventArgs^  e) {
-	prvni = Convert::ToInt32(displej->Text);
-	if ((prvni < 0) || displej->Text->Contains(",")) {
-		MessageBox::Show("nesmi byt mensi nez nula nebo obsahovat desetinnou carku");
+	if (displej->Text->Equals("-")) {
+		MessageBox::Show("chybi cislo!");
+		displej->Text = "0";
 	}
 	else {
-		if (prvni == 0)vysledek = 1;
-		else {
-			int i,vysledek=1;
-			for (i = 2; i <= prvni; i++) {
-				vysledek *= i;
-			}
-			displej->Text = Convert::ToString(vysledek);
+		prvni = Convert::ToDouble(displej->Text);
+		vysledek = prvni * prvni;
+		displej->Text = Convert::ToString(vysledek);
+	}
+}
+private: System::Void tretimocnina_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (displej->Text->Equals("-")) {
+		MessageBox::Show("chybi cislo!");
+		displej->Text = "0";
+	}
+	else {
+		prvni = Convert::ToDouble(displej->Text);
+		vysledek = prvni * prvni * prvni;
+		displej->Text = Convert::ToString(vysledek);
+	}
+}
+private: System::Void nantou_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (displej->Text->Equals("-")) {
+		MessageBox::Show("chybi cislo!");
+		displej->Text = "0";
+	}
+	else {
+		prvni = Convert::ToDouble(displej->Text);
+		displej->Text = "0";
+		op = 5; // na ntou
+	}
+}
+private: System::Void factorial_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (displej->Text->Equals("-")) {
+		MessageBox::Show("chybi cislo!");
+		displej->Text = "0";
+	}
+	else {
+		prvni = Convert::ToInt32(displej->Text);
+		if ((prvni < 0) || displej->Text->Contains(",")) {
+			MessageBox::Show("nesmi byt mensi nez nula nebo obsahovat desetinnou carku");
 		}
-	}	
+		else {
+			if (prvni == 0)vysledek = 1;
+			else {
+				int i, vysledek = 1;
+				for (i = 2; i <= prvni; i++) {
+					vysledek *= i;
+				}
+				displej->Text = Convert::ToString(vysledek);
+			}
+		}
+	}
 }
 private: System::Void odmocnina_Click(System::Object^  sender, System::EventArgs^  e) {
-	prvni = Convert::ToDouble(displej->Text);
-	vysledek = Math::Sqrt(prvni);
-	displej->Text = Convert::ToString(vysledek);
+	if (displej->Text->Equals("-")) {
+		MessageBox::Show("chybi cislo!");
+		displej->Text = "0";
+	}
+	else {
+		prvni = Convert::ToDouble(displej->Text);
+		vysledek = Math::Sqrt(prvni);
+		displej->Text = Convert::ToString(vysledek);
+	}
 }
 private: System::Void tretiodmocnina_Click(System::Object^  sender, System::EventArgs^  e) {
-	
+	if (displej->Text->Equals("-")) {
+		MessageBox::Show("chybi cislo!");
+		displej->Text = "0";
+	}
+	else {
+		prvni = Convert::ToDouble(displej->Text);
+		vysledek = cbrt(prvni);
+		displej->Text = Convert::ToString(vysledek);
+	}
 }
 private: System::Void delete1_Click(System::Object^  sender, System::EventArgs^  e) {
 	displej->Text = "0";
 }
 
+private: System::Void mazani_Click(System::Object^  sender, System::EventArgs^  e) {
+	int p;
+	p = displej->Text->Length;
+		displej->Text = displej->Text->Remove(p - 1, 1);
+	
+}
+private: System::Void cosinus_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (displej->Text->Equals("-")) {
+		MessageBox::Show("chybi cislo!");
+		displej->Text = "0";
+	}
+	else {
+		prvni = Convert::ToDouble(displej->Text);
+		vysledek = cos(prvni);
+		displej->Text = Convert::ToString(vysledek);
+	}
+}
 
-
+private: System::Void sinus_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (displej->Text->Equals("-")) {
+		MessageBox::Show("chybi cislo!");
+		displej->Text = "0";
+	}
+	else {
+		prvni = Convert::ToDouble(displej->Text);
+		vysledek = sin(prvni);
+		displej->Text = Convert::ToString(vysledek);
+	}
+}
+private: System::Void logaritmus_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (displej->Text->Equals("-")) {
+		MessageBox::Show("chybi cislo!");
+		displej->Text = "0";
+	}
+	else {
+		prvni = Convert::ToDouble(displej->Text);
+		vysledek = log(prvni); // vyhazuje spatnou hodnotu
+		displej->Text = Convert::ToString(vysledek);
+	}
+}
+private: System::Void cotangens_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (displej->Text->Equals("-")) {
+		MessageBox::Show("chybi cislo!");
+		displej->Text = "0";
+	}
+	else {
+		prvni = Convert::ToDouble(displej->Text);
+		vysledek = cos(prvni) / sin(prvni);
+		displej->Text = Convert::ToString(vysledek);
+	}
+}
+private: System::Void tangens_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (displej->Text->Equals("-")) {
+		MessageBox::Show("chybi cislo!");
+		displej->Text = "0";
+	}
+	else {
+		prvni = Convert::ToDouble(displej->Text);
+		vysledek = tan(prvni);
+		displej->Text = Convert::ToString(vysledek);
+	}
+}
+private: System::Void m_plus_Click(System::Object^  sender, System::EventArgs^  e) {
+	prvni = Convert::ToDouble(displej->Text);
+	memory += prvni;
+}
+private: System::Void m_recall_Click(System::Object^  sender, System::EventArgs^  e) {
+	displej->Text = Convert::ToString(memory);
+}
+private: System::Void m_clr_Click(System::Object^  sender, System::EventArgs^  e) {
+	memory = 0;
+}
+private: System::Void m_store_Click(System::Object^  sender, System::EventArgs^  e) {
+	memory = Convert::ToDouble(displej->Text);
+}
+private: System::Void m_minus_Click(System::Object^  sender, System::EventArgs^  e) {
+	prvni = Convert::ToDouble(displej->Text);
+	memory -= prvni;
+}
 };
 }
