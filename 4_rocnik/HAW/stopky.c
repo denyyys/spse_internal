@@ -1,7 +1,7 @@
 /*
 	Stopky
-	- 3 tasky (button, time, lcd)
-	- nahore furt bezi - dole zastaven cas
+	- 3 tasky (button, time, lcd) -> button NEMOZNY bo mi nekdo ujebal vsechny tlactika
+	- nahore furt bezi - dole zastaven cas -> NEFUNGUJE !
 */
 
 #define KEYPAD_COLS   4                                           
