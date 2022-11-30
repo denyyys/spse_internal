@@ -87,6 +87,7 @@ namespace kalkulacka {
 
 	private: System::Windows::Forms::Button^  m_minus;
 	private: System::Windows::Forms::Button^  m_clr;
+	private: System::Windows::Forms::Button^  rad_deg;
 
 
 
@@ -140,6 +141,7 @@ namespace kalkulacka {
 			this->m_store = (gcnew System::Windows::Forms::Button());
 			this->m_minus = (gcnew System::Windows::Forms::Button());
 			this->m_clr = (gcnew System::Windows::Forms::Button());
+			this->rad_deg = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// displej
@@ -468,13 +470,13 @@ namespace kalkulacka {
 			// 
 			this->factorial->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->factorial->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->factorial->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->factorial->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->factorial->Location = System::Drawing::Point(304, 159);
 			this->factorial->Name = L"factorial";
 			this->factorial->Size = System::Drawing::Size(63, 57);
 			this->factorial->TabIndex = 21;
-			this->factorial->Text = L"factorial";
+			this->factorial->Text = L"!";
 			this->factorial->UseVisualStyleBackColor = false;
 			this->factorial->Click += gcnew System::EventHandler(this, &Form1::factorial_Click);
 			// 
@@ -713,6 +715,20 @@ namespace kalkulacka {
 			this->m_clr->UseVisualStyleBackColor = false;
 			this->m_clr->Click += gcnew System::EventHandler(this, &Form1::m_clr_Click);
 			// 
+			// rad_deg
+			// 
+			this->rad_deg->BackColor = System::Drawing::SystemColors::HotTrack;
+			this->rad_deg->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->rad_deg->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->rad_deg->Location = System::Drawing::Point(442, 70);
+			this->rad_deg->Name = L"rad_deg";
+			this->rad_deg->Size = System::Drawing::Size(62, 57);
+			this->rad_deg->TabIndex = 38;
+			this->rad_deg->Text = L"R/D";
+			this->rad_deg->UseVisualStyleBackColor = false;
+			this->rad_deg->Click += gcnew System::EventHandler(this, &Form1::rad_deg_Click);
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -720,6 +736,7 @@ namespace kalkulacka {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->ClientSize = System::Drawing::Size(512, 731);
+			this->Controls->Add(this->rad_deg);
 			this->Controls->Add(this->m_clr);
 			this->Controls->Add(this->m_minus);
 			this->Controls->Add(this->m_plus);
@@ -761,8 +778,8 @@ namespace kalkulacka {
 			this->HelpButton = true;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
-			this->MaximumSize = System::Drawing::Size(528, 800);
-			this->MinimumSize = System::Drawing::Size(525, 700);
+			this->MaximumSize = System::Drawing::Size(528, 769);
+			this->MinimumSize = System::Drawing::Size(525, 769);
 			this->Name = L"Form1";
 			this->Text = L"Myn_kalk";
 			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
@@ -1037,7 +1054,7 @@ private: System::Void logaritmus_Click(System::Object^  sender, System::EventArg
 	}
 	else {
 		prvni = Convert::ToDouble(displej->Text);
-		vysledek = log(prvni); // vyhazuje spatnou hodnotu
+		vysledek = Math::Log10(prvni);
 		displej->Text = Convert::ToString(vysledek);
 	}
 }
@@ -1063,6 +1080,7 @@ private: System::Void tangens_Click(System::Object^  sender, System::EventArgs^ 
 		displej->Text = Convert::ToString(vysledek);
 	}
 }
+		 // Memory //
 private: System::Void m_plus_Click(System::Object^  sender, System::EventArgs^  e) {
 	prvni = Convert::ToDouble(displej->Text);
 	memory += prvni;
@@ -1079,6 +1097,9 @@ private: System::Void m_store_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void m_minus_Click(System::Object^  sender, System::EventArgs^  e) {
 	prvni = Convert::ToDouble(displej->Text);
 	memory -= prvni;
+}
+private: System::Void rad_deg_Click(System::Object^  sender, System::EventArgs^  e) {
+	
 }
 };
 }
