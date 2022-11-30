@@ -1,6 +1,6 @@
 ﻿  kalkulacka.cpp
-c:\4b\mynari\kalkulacka\kalkulacka\kalkulacka\form1.h(1086): warning C4244: +=: double se převádí na float; může dojít ke ztrátě dat.
-c:\4b\mynari\kalkulacka\kalkulacka\kalkulacka\form1.h(1095): warning C4244: =: double se převádí na float; může dojít ke ztrátě dat.
-c:\4b\mynari\kalkulacka\kalkulacka\kalkulacka\form1.h(1099): warning C4244: -=: double se převádí na float; může dojít ke ztrátě dat.
+c:\4b\mynari\kalkulacka\kalkulacka\kalkulacka\form1.h(1089): warning C4244: +=: double se převádí na float; může dojít ke ztrátě dat.
+c:\4b\mynari\kalkulacka\kalkulacka\kalkulacka\form1.h(1098): warning C4244: =: double se převádí na float; může dojít ke ztrátě dat.
+c:\4b\mynari\kalkulacka\kalkulacka\kalkulacka\form1.h(1102): warning C4244: -=: double se převádí na float; může dojít ke ztrátě dat.
   AssemblyInfo.obj : Našel se modul MSIL. Přírůstkové propojování je pro MSIL vypnuté. Provádí se úplné propojení.
   kalkulacka.vcxproj -> C:\4B\mynari\kalkulacka\kalkulacka\Debug\kalkulacka.exe

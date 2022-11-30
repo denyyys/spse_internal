@@ -719,13 +719,13 @@ namespace kalkulacka {
 			// 
 			this->rad_deg->BackColor = System::Drawing::SystemColors::HotTrack;
 			this->rad_deg->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->rad_deg->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->rad_deg->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->rad_deg->Location = System::Drawing::Point(442, 70);
 			this->rad_deg->Name = L"rad_deg";
 			this->rad_deg->Size = System::Drawing::Size(62, 57);
 			this->rad_deg->TabIndex = 38;
-			this->rad_deg->Text = L"R/D";
+			this->rad_deg->Text = L"Rad";
 			this->rad_deg->UseVisualStyleBackColor = false;
 			this->rad_deg->Click += gcnew System::EventHandler(this, &Form1::rad_deg_Click);
 			// 
@@ -1031,6 +1031,9 @@ private: System::Void cosinus_Click(System::Object^  sender, System::EventArgs^ 
 	}
 	else {
 		prvni = Convert::ToDouble(displej->Text);
+		if (rad_deg->Text == "Deg") {
+			prvni = prvni * Math::PI / 180;
+		}
 		vysledek = cos(prvni);
 		displej->Text = Convert::ToString(vysledek);
 	}
@@ -1043,6 +1046,9 @@ private: System::Void sinus_Click(System::Object^  sender, System::EventArgs^  e
 	}
 	else {
 		prvni = Convert::ToDouble(displej->Text);
+		if (rad_deg->Text == "Deg") {
+			prvni = prvni * Math::PI / 180;
+		}
 		vysledek = sin(prvni);
 		displej->Text = Convert::ToString(vysledek);
 	}
@@ -1054,6 +1060,10 @@ private: System::Void logaritmus_Click(System::Object^  sender, System::EventArg
 	}
 	else {
 		prvni = Convert::ToDouble(displej->Text);
+		if (rad_deg->Text == "Deg") {
+			prvni = prvni * Math::PI / 180;
+		}
+		
 		vysledek = Math::Log10(prvni);
 		displej->Text = Convert::ToString(vysledek);
 	}
@@ -1099,7 +1109,12 @@ private: System::Void m_minus_Click(System::Object^  sender, System::EventArgs^ 
 	memory -= prvni;
 }
 private: System::Void rad_deg_Click(System::Object^  sender, System::EventArgs^  e) {
-	
+	if (rad_deg->Text == "Deg") {
+		rad_deg->Text = "Rad";
+	}
+	else {
+		rad_deg->Text = "Deg";
+	}
 }
 };
 }
