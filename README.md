@@ -17,6 +17,8 @@ github repositar obsahujici ruznorode zdrojove kody a jine random materialy prev
 - rala
 - bad
 - mad
+- atro
+- stef
 
 ## Feedback
 
