@@ -10,7 +10,7 @@ github repositar obsahujici ruznorode zdrojove kody a jine random materialy prev
 ## Autori
 
 - ja (denys)
-- shidori
+- [shidori](https://github.com/Shidori366)
 - mich
 - jiri
 - pavel
