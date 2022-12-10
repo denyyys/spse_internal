@@ -20,6 +20,9 @@ github repositar obsahujici ruznorode zdrojove kody a jine random materialy prev
 - atro
 - stef
 
+## OrCAD stáhneš tu
+[OrCAD 10.5 download](https://archive.org/details/orcad10.5_202212)
+
 ## Feedback
 
 pokud nekomu tady neco chybi hodte to jako Issue pro tenhle repository
