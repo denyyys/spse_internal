@@ -3,7 +3,10 @@
 		- prepsane z puvodniho do new kitu
 		- zabugovane extrem -> asi problem s prioritou ci co, hazi to ty klikihaky pri zadavani castky, uz si nepamatuji jak to solvnout sri
 		- lepsi pred kazdou novou smenou dat RESEt jinak se objevuji na displeji hodnoty z prechozi smeny
+		
 		=> kdo se nudi muze fixnut
+		
+		=> NEDOPORUCUJI! pouzit v hodine, ledaze jsi uz mega zoufaly
 */
 #define LCD_COLS      8                                          
 #define LCD_ROWS      2
