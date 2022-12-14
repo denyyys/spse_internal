@@ -1,5 +1,5 @@
 // rodne cislo 05-09-31/1871
-// autor: ja + atro
+// autor: ja + atro + rala(trosku)
 // bug: blbe vypisuje mesic
 
 #include <iostream>
