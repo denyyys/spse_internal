@@ -35,5 +35,5 @@ najdi
 
 #### jak?
 
-zkousej
+zkousej - sam nevim co jsem to napsal za kod
 
