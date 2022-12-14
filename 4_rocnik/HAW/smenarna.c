@@ -2,7 +2,7 @@
 	smenarna
 		- prepsane z puvodniho do new kitu
 		- zabugovane extrem -> asi problem s prioritou ci co, hazi to ty klikihaky pri zadavani castky, uz si nepamatuji jak to solvnout sri
-		- lepsi pred kazdou novou smenou dat RESEt jinak se objevuji na displeji hodnoty z prechozi smeny
+		- lepsi pred kazdou novou smenou dat RESET jinak se objevuji na displeji hodnoty z predchozi smeny
 		
 		=> kdo se nudi muze fixnut
 		
