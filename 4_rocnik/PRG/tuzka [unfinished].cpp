@@ -1,6 +1,7 @@
 // vytvorte objekt tuzka ktera bude mit datove slozky: material, cena, tvrdost
 
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -8,7 +9,6 @@ class Tuzka{
 private:
 	float tvrdost;
 	string material;
-	string firma;
 	int cena;
 
 public:
@@ -31,6 +31,7 @@ public:
 	
 	void Vypis();
 	void Nacti();
+	void Uloz();
 };
 
 Tuzka::Tuzka()
@@ -76,6 +77,57 @@ void Tuzka::Nacti()
 	cin >> tvrdost;
 }
 
+void Hledat(int pocet)
+{
+	Tuzka p[10];
+	int i, priznak=0;
+	string matr;
+	
+	cout << "Hledej material"<< endl;
+	cin >> matr;
+	for(i=0;i<pocet;i++){
+		if(matr==p[i].DejMaterial()){
+			p[i].Vypis();
+			priznak++;
+		}
+	}
+	if(priznak==0){
+		cout << "Nic nebylo nalezeno!" << endl;
+	}
+}
+
+void Hledej_cislo(int pocet)
+{
+	Tuzka p[10];
+	int i,priznak=0;
+	int tvrd;
+	
+	cout <<"Hledej tvrdost"<<endl;
+	cin>>tvrd;
+	for(i=0;i<pocet;i++)
+	{
+		
+		if(tvrd==p[i].DejTvrdost())
+		{
+			p[i].Vypis();
+			priznak++;
+		}
+		
+		
+	}
+	if(priznak == 0)
+	{
+		cout << "Nebylo nalezeno" << endl;
+	}
+}
+void Tuzka::Uloz()
+{
+	ofstream out;
+	out.open("temp.txt",ios::app);
+		out<< material << 'x' <<tvrdost<<endl;
+	out.close();
+}
+
 int main()
 {
 	Tuzka t,t1(0.5),t2(1,"drevo"),t3(0.7,"kov",10);
@@ -90,6 +142,12 @@ int main()
 	
 	t.Nacti();
 	t.Vypis();
+	
+	t3.Uloz();
+	
+	Hledej_cislo(2);
+	
+
 	
 	return 0;
 }
