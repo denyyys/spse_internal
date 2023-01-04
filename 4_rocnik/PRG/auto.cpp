@@ -109,7 +109,7 @@ int main(){
 			cout << "Zadej nazev souboru: ";
 			cin >> filename;
 			
-			// nacti_soubor(filename, auta, auta_num);
+			// nacti_soubor(filename, auta, auta_num); /* nevim no xd nefunguje */
 		}
 		else{
 			cout << "neplatna volba" << endl;
