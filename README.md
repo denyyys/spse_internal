@@ -32,6 +32,8 @@ pokud nekomu tady neco chybi hodte to jako Issue pro tenhle repository
 #### kde?
 
 najdi
+- predmety rozdeleny do slozek
+    -> v nich bud source kody nebo jine materialy
 
 #### jak?
 
