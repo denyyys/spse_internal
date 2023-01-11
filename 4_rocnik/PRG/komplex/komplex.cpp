@@ -10,8 +10,8 @@ Komplex::Komplex(float r, float i){
 	im = i;
 }
 
-/*void Komplex::nacti(){
-	cout << "\n realna cast: ";
+/*void Komplex::nacti(){		// da se to udelat i takto
+	cout << "\n realna cast: ";	// tyto 2 funkce nahrazeny -> ostream & istream
 	cin >> this->re;
 	cout << "imaginar cast: ";
 	cin >> this->im;
