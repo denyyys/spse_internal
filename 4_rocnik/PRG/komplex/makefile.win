@@ -1,0 +1,37 @@
+# Project: Komplex
+# Makefile created by Red Panda C++ 1.1.2
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = Komplex_private.res
+OBJ      = main.o komplex.o $(RES)
+LINKOBJ  = main.o komplex.o $(RES)
+CLEANOBJ  =  main.o komplex.o Komplex_private.res komplex.exe
+LIBS     = 
+INCS     =  
+CXXINCS  =  
+BIN      = komplex.exe
+CXXFLAGS = $(CXXINCS)  -g3 -pipe -Wall -Wextra -D__DEBUG__
+CFLAGS   = $(INCS)  -g3 -pipe -Wall -Wextra -D__DEBUG__
+RM       = del /q /f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(CLEANOBJ) > NUL 2>&1
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp komplex.h
+	$(CPP) -c C:/4B/mynari_komplex/komplex/main.cpp -o main.o $(CXXFLAGS) 
+
+komplex.o: komplex.cpp komplex.h
+	$(CPP) -c C:/4B/mynari_komplex/komplex/komplex.cpp -o komplex.o $(CXXFLAGS) 
+
+Komplex_private.res: Komplex_private.rc 
+	$(WINDRES) -i Komplex_private.rc --input-format=rc -o Komplex_private.res -O coff 
+
