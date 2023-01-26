@@ -17,7 +17,7 @@ github repositar obsahujici ruznorode zdrojove kody a jine random materialy prev
 - rala
 - bad
 - mad
-- atro
+- [atro](https://github.com/Atrovski)
 - stef
 
 ## OrCAD stáhneš tu
