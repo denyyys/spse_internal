@@ -12,7 +12,7 @@
   *	 								p. uciteli pls dont blame us for this solution ;)
   * 								chybi -> interrupt pro button a skipnuti roboty / prestavky
   *									delay set on 1ms because of testing in school
-	*
+  *
   ********************************************************************************************************************************************
 */
 #define LCD_COLS 8
