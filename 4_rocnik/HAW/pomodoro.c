@@ -22,13 +22,16 @@
 #include "stm32_kit.h"
 #include "stm32_kit/led.h"
 #include "stm32_kit/lcd.h"
+#include "stm32_kit/uart.h"
 
 OS_TID taskID1;
 OS_TID taskID2;
 OS_TID taskID3;
 OS_TID taskID4;
+OS_TID taskID5;
+OS_TID taskID6;
 
-int min=6,sec=0,prestavka=0,counter=0,robota_counter = 1;
+int min=6,sec=0,prestavka=0,counter=0,robota_counter = 1,sipka=0;
 
 __task void Pomodoro(void){
 	for (;;){
@@ -122,12 +125,46 @@ __task void LCD(void){
 	}
 }
 
+/* send min + sec + robota_counter via UART */
+
+__task void UART(void){ 
+		for(;;){
+			char line[50] = {0};
+			int x,y;
+			
+			if(sipka == 1){ 								// button check
+			snprintf(line,15,"->%02d:%02d|%d|\n\r",min,sec,robota_counter);
+			}else{
+			snprintf(line,15,"%02d:%02d|%d|\n\r",min,sec,robota_counter);
+			}
+			
+			x = sizeof(line);
+
+			UART_write(line,x); 					// send data
+			delay_ms(100);
+		}
+}
+
+__task void button(void){
+	for(;;){
+		if(io_read(USER_BUTTON)){
+			sipka = 1;
+			delay_ms(100);
+		}else{
+			sipka = 0;
+		}
+	}
+}
+
 __task void board_init(void){
 	LCD_setup();
+	UART_setup();
 	
 	taskID1 = os_tsk_create(Pomodoro,0);
 	taskID2 = os_tsk_create(Pomodoro_prestavka,0);
 	taskID3 = os_tsk_create(LCD,0);
+	taskID5 = os_tsk_create(UART,0);
+	taskID6 = os_tsk_create(button,0);
 	
 	os_tsk_delete_self();
 }
