@@ -135,13 +135,13 @@ __task void UART(void){
 			if(sipka == 1){ 								// button check
 			snprintf(line,15,"->%02d:%02d|%d|\n\r",min,sec,robota_counter);
 			}else{
-			snprintf(line,15,"%02d:%02d|%d|\n\r",min,sec,robota_counter);
+				snprintf(line,15,"%02d:%02d|%d|\n\r",min,sec,robota_counter);
 			}
 			
 			x = sizeof(line);
 
 			UART_write(line,x); 					// send data
-			delay_ms(100);
+			delay_ms(10);
 		}
 }
 
@@ -149,7 +149,6 @@ __task void button(void){
 	for(;;){
 		if(io_read(USER_BUTTON)){
 			sipka = 1;
-			delay_ms(100);
 		}else{
 			sipka = 0;
 		}
